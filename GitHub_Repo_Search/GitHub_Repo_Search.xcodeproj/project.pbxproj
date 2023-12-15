@@ -34,6 +34,7 @@
 		EF0320272B2C99F100AFAAE2 /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320262B2C99F100AFAAE2 /* MockSearchService.swift */; };
 		EF03202A2B2C9AB800AFAAE2 /* MockResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320292B2C9AB800AFAAE2 /* MockResponseJSON.swift */; };
 		EF03202C2B2C9C7E00AFAAE2 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03202B2B2C9C7E00AFAAE2 /* TestUtil.swift */; };
+		EF3A1A792B2CB86B00CE8B81 /* ServiceHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A1A782B2CB86B00CE8B81 /* ServiceHelperTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		EF0320262B2C99F100AFAAE2 /* MockSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
 		EF0320292B2C9AB800AFAAE2 /* MockResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponseJSON.swift; sourceTree = "<group>"; };
 		EF03202B2B2C9C7E00AFAAE2 /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
+		EF3A1A782B2CB86B00CE8B81 /* ServiceHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelperTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			children = (
 				EF0320282B2C9AA400AFAAE2 /* Support */,
 				EF0320232B2C992F00AFAAE2 /* Search */,
+				EF3A1A772B2CB83F00CE8B81 /* ServiceHelper */,
 				EF0320022B2C358A00AFAAE2 /* CloudServicesTests.swift */,
 			);
 			path = CloudServicesTests;
@@ -284,6 +287,14 @@
 				EF03202B2B2C9C7E00AFAAE2 /* TestUtil.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		EF3A1A772B2CB83F00CE8B81 /* ServiceHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A1A782B2CB86B00CE8B81 /* ServiceHelperTest.swift */,
+			);
+			path = ServiceHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,6 +549,7 @@
 				EF0320032B2C358A00AFAAE2 /* CloudServicesTests.swift in Sources */,
 				EF03202C2B2C9C7E00AFAAE2 /* TestUtil.swift in Sources */,
 				EF0320252B2C995A00AFAAE2 /* SearchServiceTest.swift in Sources */,
+				EF3A1A792B2CB86B00CE8B81 /* ServiceHelperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

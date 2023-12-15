@@ -260,11 +260,23 @@ class MockResponseJSON {
     }]
 }
 """
+
+    let searchResponseLimitExceed = """
+{"message":"API rate limit exceeded for 122.161.50.239. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+"""
 }
 
 extension MockResponseJSON {
     func getSearchSuccessResponse() -> SearchResponse {
         let data = searchResponseSuccess.data(using: .utf8)
+        guard let expectedResponse = TestUtil.decodeSearchJSON(data: data) else {
+            fatalError("Couldn't decode existing JSON string")
+        }
+        return expectedResponse
+    }
+
+    func getSearchRateLimitExceedResponse() -> SearchResponse {
+        let data = searchResponseLimitExceed.data(using: .utf8)
         guard let expectedResponse = TestUtil.decodeSearchJSON(data: data) else {
             fatalError("Couldn't decode existing JSON string")
         }

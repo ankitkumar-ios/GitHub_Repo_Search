@@ -22,7 +22,7 @@ public struct SearchEnvironment: CloudEnvironment {
         return Endpoint(
             scheme: getScheme(),
             host: getHost(),
-            path: "search/repositories",
+            path: "/search/repositories",
             queryItems: getQueryItem(with: query)
         )
     }

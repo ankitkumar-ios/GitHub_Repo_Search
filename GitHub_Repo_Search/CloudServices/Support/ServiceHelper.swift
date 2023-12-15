@@ -37,7 +37,9 @@ public class ServiceHelper: ServiceHelperProtocol {
 
 // MARK: - Parsing
 extension ServiceHelper {
-    func parsingResponse<T: Decodable>(
+    /// Exposed for unit testing
+    /// Generic function to Parse API response
+    public func parsingResponse<T: Decodable>(
         data: Data?,
         response: URLResponse?,
         error: Error?,

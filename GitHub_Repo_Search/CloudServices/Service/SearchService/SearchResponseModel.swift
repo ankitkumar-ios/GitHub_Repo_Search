@@ -15,11 +15,13 @@ public struct SearchResponse: Codable {
     public var totalCount: Int?
     public var incompleteResults: Bool?
     public var items: [Items]?
+    public var message: String?
 
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
         case incompleteResults = "incomplete_results"
         case items
+        case message
     }
 
     public init(from decoder: Decoder) throws {
@@ -27,6 +29,7 @@ public struct SearchResponse: Codable {
         totalCount = try values.decodeIfPresent(Int.self, forKey: .totalCount)
         incompleteResults = try values.decodeIfPresent(Bool.self, forKey: .incompleteResults)
         items = try values.decodeIfPresent([Items].self, forKey: .items)
+        message = try values.decodeIfPresent(String.self, forKey: .message)
     }
 }
 
