@@ -30,6 +30,10 @@
 		EF03201E2B2C53CD00AFAAE2 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03201D2B2C53CD00AFAAE2 /* ServiceError.swift */; };
 		EF0320202B2C7AF300AFAAE2 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03201F2B2C7AF300AFAAE2 /* SearchService.swift */; };
 		EF0320222B2C7CCB00AFAAE2 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320212B2C7CCB00AFAAE2 /* SearchResponseModel.swift */; };
+		EF0320252B2C995A00AFAAE2 /* SearchServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320242B2C995A00AFAAE2 /* SearchServiceTest.swift */; };
+		EF0320272B2C99F100AFAAE2 /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320262B2C99F100AFAAE2 /* MockSearchService.swift */; };
+		EF03202A2B2C9AB800AFAAE2 /* MockResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320292B2C9AB800AFAAE2 /* MockResponseJSON.swift */; };
+		EF03202C2B2C9C7E00AFAAE2 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03202B2B2C9C7E00AFAAE2 /* TestUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,10 @@
 		EF03201D2B2C53CD00AFAAE2 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		EF03201F2B2C7AF300AFAAE2 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		EF0320212B2C7CCB00AFAAE2 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
+		EF0320242B2C995A00AFAAE2 /* SearchServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceTest.swift; sourceTree = "<group>"; };
+		EF0320262B2C99F100AFAAE2 /* MockSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
+		EF0320292B2C9AB800AFAAE2 /* MockResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponseJSON.swift; sourceTree = "<group>"; };
+		EF03202B2B2C9C7E00AFAAE2 /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +231,8 @@
 		EF0320012B2C358A00AFAAE2 /* CloudServicesTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF0320282B2C9AA400AFAAE2 /* Support */,
+				EF0320232B2C992F00AFAAE2 /* Search */,
 				EF0320022B2C358A00AFAAE2 /* CloudServicesTests.swift */,
 			);
 			path = CloudServicesTests;
@@ -254,6 +264,24 @@
 				EF0320132B2C3B3500AFAAE2 /* CloudEnvironment.swift */,
 				EF0320192B2C4CD000AFAAE2 /* ServiceHelper.swift */,
 				EF03201D2B2C53CD00AFAAE2 /* ServiceError.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		EF0320232B2C992F00AFAAE2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EF0320242B2C995A00AFAAE2 /* SearchServiceTest.swift */,
+				EF0320262B2C99F100AFAAE2 /* MockSearchService.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EF0320282B2C9AA400AFAAE2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EF0320292B2C9AB800AFAAE2 /* MockResponseJSON.swift */,
+				EF03202B2B2C9C7E00AFAAE2 /* TestUtil.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -505,7 +533,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF03202A2B2C9AB800AFAAE2 /* MockResponseJSON.swift in Sources */,
+				EF0320272B2C99F100AFAAE2 /* MockSearchService.swift in Sources */,
 				EF0320032B2C358A00AFAAE2 /* CloudServicesTests.swift in Sources */,
+				EF03202C2B2C9C7E00AFAAE2 /* TestUtil.swift in Sources */,
+				EF0320252B2C995A00AFAAE2 /* SearchServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
