@@ -22,3 +22,12 @@ public enum HTTPStatusCode: Int {
     case notFound = 404
     case internalServerError = 500
 }
+
+enum HTTPMethod: String {
+    case get = "GET"
+}
+
+struct HTTPConstant {
+    static let headerKeyContentType = "Content-Type"
+    static let headerValueContentTypeJson = "application/json"
+}

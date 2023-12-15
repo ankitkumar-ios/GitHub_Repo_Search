@@ -10,7 +10,7 @@ import Foundation
 /// Search environment helps to get the search endpoints
 public struct SearchEnvironment: CloudEnvironment {
     /// Just to make initializer public
-    init() {}
+    public init() {}
 
     /// Returns baseURL
     /// - Returns: URL(optional)

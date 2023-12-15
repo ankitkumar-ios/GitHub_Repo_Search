@@ -28,6 +28,8 @@
 		EF03201A2B2C4CD000AFAAE2 /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320192B2C4CD000AFAAE2 /* ServiceHelper.swift */; };
 		EF03201C2B2C4D3900AFAAE2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03201B2B2C4D3900AFAAE2 /* Endpoint.swift */; };
 		EF03201E2B2C53CD00AFAAE2 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03201D2B2C53CD00AFAAE2 /* ServiceError.swift */; };
+		EF0320202B2C7AF300AFAAE2 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03201F2B2C7AF300AFAAE2 /* SearchService.swift */; };
+		EF0320222B2C7CCB00AFAAE2 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320212B2C7CCB00AFAAE2 /* SearchResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		EF0320192B2C4CD000AFAAE2 /* ServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		EF03201B2B2C4D3900AFAAE2 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EF03201D2B2C53CD00AFAAE2 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		EF03201F2B2C7AF300AFAAE2 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		EF0320212B2C7CCB00AFAAE2 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				EF0320172B2C4CCA00AFAAE2 /* SearchEnvironment.swift */,
+				EF03201F2B2C7AF300AFAAE2 /* SearchService.swift */,
+				EF0320212B2C7CCB00AFAAE2 /* SearchResponseModel.swift */,
 			);
 			path = SearchService;
 			sourceTree = "<group>";
@@ -488,6 +494,8 @@
 				EF03201A2B2C4CD000AFAAE2 /* ServiceHelper.swift in Sources */,
 				EF0320142B2C3B3500AFAAE2 /* CloudEnvironment.swift in Sources */,
 				EF03201C2B2C4D3900AFAAE2 /* Endpoint.swift in Sources */,
+				EF0320202B2C7AF300AFAAE2 /* SearchService.swift in Sources */,
+				EF0320222B2C7CCB00AFAAE2 /* SearchResponseModel.swift in Sources */,
 				EF03201E2B2C53CD00AFAAE2 /* ServiceError.swift in Sources */,
 				EF0320162B2C3C3200AFAAE2 /* Constant.swift in Sources */,
 			);
