@@ -191,6 +191,7 @@
 		EF031F992B2C348D00AFAAE2 /* GitHub_Repo_Search */ = {
 			isa = PBXGroup;
 			children = (
+				EF50B99B2B2D4E5300F243A7 /* Features */,
 				EF031F9A2B2C348D00AFAAE2 /* AppDelegate.swift */,
 				EF031F9C2B2C348D00AFAAE2 /* SceneDelegate.swift */,
 				EF031F9E2B2C348D00AFAAE2 /* ViewController.swift */,
@@ -295,6 +296,21 @@
 				EF3A1A782B2CB86B00CE8B81 /* ServiceHelperTest.swift */,
 			);
 			path = ServiceHelper;
+			sourceTree = "<group>";
+		};
+		EF50B99B2B2D4E5300F243A7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EF50B99C2B2D4E8700F243A7 /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EF50B99C2B2D4E8700F243A7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
