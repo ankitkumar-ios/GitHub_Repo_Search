@@ -34,6 +34,15 @@
 		EF0320272B2C99F100AFAAE2 /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320262B2C99F100AFAAE2 /* MockSearchService.swift */; };
 		EF03202A2B2C9AB800AFAAE2 /* MockResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0320292B2C9AB800AFAAE2 /* MockResponseJSON.swift */; };
 		EF03202C2B2C9C7E00AFAAE2 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03202B2B2C9C7E00AFAAE2 /* TestUtil.swift */; };
+		EF304EB92B2D8915002ED7DE /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304EB82B2D8915002ED7DE /* DashboardViewController.swift */; };
+		EF304EC32B2DBE8E002ED7DE /* DashboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304EC22B2DBE8E002ED7DE /* DashboardProtocol.swift */; };
+		EF304EC52B2DC32C002ED7DE /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304EC42B2DC32C002ED7DE /* DashboardPresenter.swift */; };
+		EF304EC72B2DC3DB002ED7DE /* DashboardIntractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304EC62B2DC3DB002ED7DE /* DashboardIntractor.swift */; };
+		EF304EC92B2DC43E002ED7DE /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304EC82B2DC43E002ED7DE /* DashboardRouter.swift */; };
+		EF304ECB2B2DDEA4002ED7DE /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304ECA2B2DDEA4002ED7DE /* RepositoryCollectionViewCell.swift */; };
+		EF304ECD2B2DDF34002ED7DE /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304ECC2B2DDF34002ED7DE /* DashboardViewModel.swift */; };
+		EF304ECF2B2DEF67002ED7DE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304ECE2B2DEF67002ED7DE /* AppConstants.swift */; };
+		EF304ED12B2DFC13002ED7DE /* CloudRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF304ED02B2DFC13002ED7DE /* CloudRepo.swift */; };
 		EF3A1A792B2CB86B00CE8B81 /* ServiceHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A1A782B2CB86B00CE8B81 /* ServiceHelperTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +129,15 @@
 		EF0320262B2C99F100AFAAE2 /* MockSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
 		EF0320292B2C9AB800AFAAE2 /* MockResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponseJSON.swift; sourceTree = "<group>"; };
 		EF03202B2B2C9C7E00AFAAE2 /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
+		EF304EB82B2D8915002ED7DE /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		EF304EC22B2DBE8E002ED7DE /* DashboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardProtocol.swift; sourceTree = "<group>"; };
+		EF304EC42B2DC32C002ED7DE /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		EF304EC62B2DC3DB002ED7DE /* DashboardIntractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardIntractor.swift; sourceTree = "<group>"; };
+		EF304EC82B2DC43E002ED7DE /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		EF304ECA2B2DDEA4002ED7DE /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF304ECC2B2DDF34002ED7DE /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		EF304ECE2B2DEF67002ED7DE /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		EF304ED02B2DFC13002ED7DE /* CloudRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepo.swift; sourceTree = "<group>"; };
 		EF3A1A782B2CB86B00CE8B81 /* ServiceHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelperTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +209,7 @@
 		EF031F992B2C348D00AFAAE2 /* GitHub_Repo_Search */ = {
 			isa = PBXGroup;
 			children = (
+				EF304EBA2B2D9310002ED7DE /* Helper */,
 				EF50B99B2B2D4E5300F243A7 /* Features */,
 				EF031F9A2B2C348D00AFAAE2 /* AppDelegate.swift */,
 				EF031F9C2B2C348D00AFAAE2 /* SceneDelegate.swift */,
@@ -290,6 +309,64 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		EF304EBA2B2D9310002ED7DE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EF304ECE2B2DEF67002ED7DE /* AppConstants.swift */,
+				EF304ED02B2DFC13002ED7DE /* CloudRepo.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EF304EBB2B2D984D002ED7DE /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EF304EC22B2DBE8E002ED7DE /* DashboardProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		EF304EBD2B2DA781002ED7DE /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				EF304ECC2B2DDF34002ED7DE /* DashboardViewModel.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		EF304EBE2B2DA7B2002ED7DE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EF304EB82B2D8915002ED7DE /* DashboardViewController.swift */,
+				EF304ECA2B2DDEA4002ED7DE /* RepositoryCollectionViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EF304EBF2B2DA7B5002ED7DE /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EF304EC42B2DC32C002ED7DE /* DashboardPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		EF304EC02B2DA7B9002ED7DE /* router */ = {
+			isa = PBXGroup;
+			children = (
+				EF304EC82B2DC43E002ED7DE /* DashboardRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		EF304EC12B2DA7BD002ED7DE /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EF304EC62B2DC3DB002ED7DE /* DashboardIntractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
 		EF3A1A772B2CB83F00CE8B81 /* ServiceHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,16 +378,22 @@
 		EF50B99B2B2D4E5300F243A7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				EF50B99C2B2D4E8700F243A7 /* Search */,
+				EF50B99C2B2D4E8700F243A7 /* Dashboard */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		EF50B99C2B2D4E8700F243A7 /* Search */ = {
+		EF50B99C2B2D4E8700F243A7 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				EF304EBB2B2D984D002ED7DE /* protocol */,
+				EF304EBD2B2DA781002ED7DE /* entity */,
+				EF304EC12B2DA7BD002ED7DE /* interactor */,
+				EF304EC02B2DA7B9002ED7DE /* router */,
+				EF304EBF2B2DA7B5002ED7DE /* presenter */,
+				EF304EBE2B2DA7B2002ED7DE /* view */,
 			);
-			path = Search;
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,8 +601,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF031F9F2B2C348D00AFAAE2 /* ViewController.swift in Sources */,
+				EF304ECD2B2DDF34002ED7DE /* DashboardViewModel.swift in Sources */,
+				EF304EC92B2DC43E002ED7DE /* DashboardRouter.swift in Sources */,
 				EF031F9B2B2C348D00AFAAE2 /* AppDelegate.swift in Sources */,
+				EF304EC32B2DBE8E002ED7DE /* DashboardProtocol.swift in Sources */,
 				EF031F9D2B2C348D00AFAAE2 /* SceneDelegate.swift in Sources */,
+				EF304EC72B2DC3DB002ED7DE /* DashboardIntractor.swift in Sources */,
+				EF304EB92B2D8915002ED7DE /* DashboardViewController.swift in Sources */,
+				EF304ECF2B2DEF67002ED7DE /* AppConstants.swift in Sources */,
+				EF304ECB2B2DDEA4002ED7DE /* RepositoryCollectionViewCell.swift in Sources */,
+				EF304EC52B2DC32C002ED7DE /* DashboardPresenter.swift in Sources */,
+				EF304ED12B2DFC13002ED7DE /* CloudRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
