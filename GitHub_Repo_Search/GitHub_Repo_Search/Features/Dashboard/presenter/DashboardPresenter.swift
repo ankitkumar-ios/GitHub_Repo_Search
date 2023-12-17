@@ -12,11 +12,17 @@ class DashboardPresenter: DashboardViewToPresenterProtocol {
     weak var view: DashboardPresenterToViewProtocol?
     var interactor: DashboardPresenterToInteractorProtocol?
     var router: DashboardPresenterToRouterProtocol?
-
+    
+    /// Responsible for fetching the data from interactor
+    /// - Parameter query: String
     func startFetchingRepositoryData(for query: String) {
         interactor?.fetchRepositoryData(for: query)
     }
-
+    
+    /// Responsbile for opening the RepositoryDetailViewController
+    /// - Parameters:
+    ///   - navigationController: UINavigationController
+    ///   - detail: Items
     func showRepositoryDetailViewController(navigationController: UINavigationController?, detail: Items) {
         router?.pushToRepositoryDetailViewController(navigationController: navigationController, itemData: detail)
     }
@@ -27,6 +33,8 @@ extension DashboardPresenter: DashboardIntractorToPresenterProtocol {
         view?.showSearchResult(response: response)
     }
     
+    /// Responsbile for paring the error and send the error message to the DashbaordViewController
+    /// - Parameter error: ServiceError
     func repositoryDataFetchedError(error: ServiceError) {
         var message = AppConstants.badData
 

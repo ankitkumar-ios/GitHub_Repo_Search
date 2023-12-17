@@ -12,7 +12,9 @@ class DashboardRouter: DashboardPresenterToRouterProtocol {
     func mainstoryboard() -> UIStoryboard {
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }
-
+    
+    /// Responsible for creating and initializing the DashboardViewController module and it's instance
+    /// - Returns: DashboardViewController
     func createModule() -> DashboardViewController {
         let view = mainstoryboard().instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
         let presenter: DashboardViewToPresenterProtocol & DashboardIntractorToPresenterProtocol = DashboardPresenter()

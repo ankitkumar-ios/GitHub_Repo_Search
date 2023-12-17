@@ -12,6 +12,10 @@ class RepoDetailRouter: RepoDetailPresenterToRouterProtocol {
     private func mainStoryboard() -> UIStoryboard {
         UIStoryboard(name: "Main", bundle: Bundle.main)
     }
+
+    /// Responsible for initializating the module and return the ViewController instance
+    /// - Parameter data: Repo Details data
+    /// - Returns: RepoDetailViewController
     func createModule(data: Items) -> RepoDetailViewController {
         let view = mainStoryboard().instantiateViewController(withIdentifier: String(describing: RepoDetailViewController.self)) as! RepoDetailViewController
         let presenter: RepoDetailViewToPresenterProtocol & RepoDetailInteractorToPresenterProtocol = RepoDetailPresenter()

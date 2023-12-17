@@ -8,18 +8,25 @@
 import UIKit
 import CloudServices
 
+/// Used to call the cloud service modules
 protocol ICloudRepo {
     func getRepositoryList(for query: String, completion: @escaping (Result<SearchResponse, ServiceError>) -> Void)
 }
 
 class CloudRepo: ICloudRepo {
+    /// This is used for getting the repository list for the cloud module
+    /// - Parameters:
+    ///   - query: String for searching
+    ///   - completion: closure with success and failure response
     func getRepositoryList(for query: String, completion: @escaping (Result<SearchResponse, ServiceError>) -> Void ) {
         let service = SearchService()
         service.getRepositoryList(for: query, completion: completion)
+        // Only for testing purpose
 //        completion(.success(MockResponse().getSearchSuccessResponse()))
     }
 }
 
+// MARK: - Remove this code - Only being used for testing purpose
 fileprivate class MockResponse {
     let searchResponseSuccess = """
 {

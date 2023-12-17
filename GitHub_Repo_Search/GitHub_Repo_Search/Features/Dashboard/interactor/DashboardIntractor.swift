@@ -12,7 +12,8 @@ class DashboardIntractor: DashboardPresenterToInteractorProtocol {
     weak var presenter: DashboardIntractorToPresenterProtocol?
     var cloudRepo = CloudRepo()
 
-    // call the cloudservice for calling api
+    /// Responsible for calling the cloudRepo for the API calling
+    /// - Parameter query: Search string
     func fetchRepositoryData(for query: String) {
         cloudRepo.getRepositoryList(for: query) { [weak self] result in
             guard let self = self else {

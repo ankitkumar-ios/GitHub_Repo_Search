@@ -40,6 +40,9 @@ class RepoDetailViewController: UIViewController {
 }
 
 extension RepoDetailViewController: RepoDetailPresenterToViewProtocol {
+
+    /// Responsible for populating the data to the UI components
+    /// - Parameter data: Items i.e. RepoDetail
     func populateRepoData(data: Items) {
         DispatchQueue.main.async { [weak self] in
             self?.nameLabel.text = data.name
