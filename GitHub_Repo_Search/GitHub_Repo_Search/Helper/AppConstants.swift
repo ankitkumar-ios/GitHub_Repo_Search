@@ -16,6 +16,8 @@ struct AppConstants {
     static let matchingResults = "matching results"
     static let dashboard = "Dashboard"
     static let kb = "KB"
+    static let startRepoByLanguage = "Search repository by language"
+    static let gettingNewResults = "Getting new results"
 
     static let titleError = "Error"
     static let noInternetConnection = "No Internet, please turn on wifi or mobile network"

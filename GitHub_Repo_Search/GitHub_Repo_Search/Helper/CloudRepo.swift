@@ -15,8 +15,8 @@ protocol ICloudRepo {
 class CloudRepo: ICloudRepo {
     func getRepositoryList(for query: String, completion: @escaping (Result<SearchResponse, ServiceError>) -> Void ) {
         let service = SearchService()
-        completion(.success(MockResponse().getSearchSuccessResponse()))
-//        service.getRepositoryList(for: query, completion: completion)
+        service.getRepositoryList(for: query, completion: completion)
+//        completion(.success(MockResponse().getSearchSuccessResponse()))
     }
 }
 

@@ -140,14 +140,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="jIW-0e-Rq3"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="g9l-I0-DZD">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.2117646933" green="0.2352941036" blue="0.26666668059999998" alpha="0.50253518211920534" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.18823529780000001" green="0.20392158630000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="4jE-hU-vO7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-10" id="29R-O3-EQY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g9l-I0-DZD" secondAttribute="trailing" id="2EI-un-tw5"/>
                             <constraint firstItem="24O-hQ-a2f" firstAttribute="top" secondItem="Mlp-eR-bKr" secondAttribute="bottom" constant="20" id="Gfd-oV-iT0"/>
                             <constraint firstItem="Mlp-eR-bKr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IgH-Kf-hdc"/>
                             <constraint firstItem="gxX-mU-ayi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MrU-lg-rEH"/>
+                            <constraint firstItem="g9l-I0-DZD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PAa-Aa-6Y1"/>
                             <constraint firstItem="Mlp-eR-bKr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rxc-QF-TFW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="24O-hQ-a2f" secondAttribute="trailing" constant="20" id="YuD-w5-4zH"/>
                             <constraint firstItem="gxX-mU-ayi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aPq-0D-5dT"/>
@@ -155,9 +162,12 @@
                             <constraint firstAttribute="bottom" secondItem="gxX-mU-ayi" secondAttribute="bottom" id="guk-Ht-Beu"/>
                             <constraint firstItem="gxX-mU-ayi" firstAttribute="top" secondItem="24O-hQ-a2f" secondAttribute="bottom" constant="10" id="kLg-Fs-XGK"/>
                             <constraint firstItem="24O-hQ-a2f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="koe-nq-N37"/>
+                            <constraint firstItem="g9l-I0-DZD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uts-4I-l71"/>
+                            <constraint firstAttribute="bottom" secondItem="g9l-I0-DZD" secondAttribute="bottom" id="vO0-Dn-U4b"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="g9l-I0-DZD" id="t7z-Sd-a2p"/>
                         <outlet property="collectionView" destination="gxX-mU-ayi" id="e88-Np-tqv"/>
                         <outlet property="resultTitle" destination="24O-hQ-a2f" id="zMH-8e-7MG"/>
                         <outlet property="searchBar" destination="4jE-hU-vO7" id="mMe-Ub-VDF"/>

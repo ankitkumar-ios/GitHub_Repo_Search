@@ -12,9 +12,9 @@ class DashboardViewController: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var resultTitle: UILabel!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     var presenter: DashboardViewToPresenterProtocol?
-
     var dataSource: SearchResponse? = nil
 
     override func viewDidLoad() {
@@ -22,6 +22,7 @@ class DashboardViewController: UIViewController {
         setupSearchBar()
         setupCollectionView()
         setupTexts()
+        setupActivityIndicator()
     }
 
     private func setupNavigation() {
@@ -37,6 +38,8 @@ class DashboardViewController: UIViewController {
         searchBar.isTranslucent = false
         searchBar.backgroundImage = UIImage()
         searchBar.delegate = self
+
+        searchBar.becomeFirstResponder()
     }
 
     private func setupCollectionView() {
@@ -45,16 +48,25 @@ class DashboardViewController: UIViewController {
     }
 
     private func setupTexts() {
-        self.resultTitle.text = AppConstants.empty
+        self.resultTitle.text = AppConstants.startRepoByLanguage
+    }
+
+    func setupActivityIndicator() {
+        activityIndicator.color = .white
     }
 }
 
 // MARK: - Refresh Data
 extension DashboardViewController: DashboardPresenterToViewProtocol {
     func showSearchResult(response: SearchResponse) {
+        activityIndicator.stopAnimating()
         dataSource = response
         DispatchQueue.main.async { [weak self] in
-            self?.resultTitle.text = String(self?.dataSource?.items?.count ?? 0) + AppConstants.space + AppConstants.matchingResults
+            if response.message == nil || response.message == "" {
+                self?.resultTitle.text = String(self?.dataSource?.items?.count ?? 0) + AppConstants.space + AppConstants.matchingResults
+            } else {
+                self?.resultTitle.text = self?.dataSource?.message
+            }
             self?.collectionView.reloadData()
         }
     }
@@ -75,6 +87,8 @@ extension DashboardViewController: UISearchBarDelegate {
         guard let searchText = searchBar.text else {
             return
         }
+        resultTitle.text = AppConstants.gettingNewResults
+        activityIndicator.startAnimating()
         presenter?.startFetchingRepositoryData(for: searchText)
     }
 }
