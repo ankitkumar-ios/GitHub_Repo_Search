@@ -10,7 +10,7 @@ import CloudServices
 
 class DashboardIntractor: DashboardPresenterToInteractorProtocol {
     weak var presenter: DashboardIntractorToPresenterProtocol?
-    var cloudRepo = CloudRepo()
+    var cloudRepo: ICloudRepo = CloudRepo()
 
     /// Responsible for calling the cloudRepo for the API calling
     /// - Parameter query: Search string

@@ -34,28 +34,31 @@ public struct SearchResponse: Codable {
 }
 
 public struct Items: Codable {
-    public let id: Int?
-    public let name: String?
-    public let fullName: String?
-    public let owner: Owner?
-    public let htmlUrl: String?
-    public let description: String?
-    public let createdAt: String?
-    public let updatedAt: String?
-    public let homepage: String?
-    public let size: Int?
-    public let stargazersCount: Int?
-    public let watchersCount: Int?
-    public let language: String?
-    public let forksCount: Int?
-    public let openIssuesCount: Int?
-    public let license: License?
-    public let allowForking: Bool?
-    public let topics: [String]?
-    public let visibility: String?
-    public let watchers: Int?
-    public let defaultBranch: String?
-    public let score: Double?
+    /// Just to make the initializer public
+    public init() {}
+
+    public var id: Int?
+    public var name: String?
+    public var fullName: String?
+    public var owner: Owner?
+    public var htmlUrl: String?
+    public var description: String?
+    public var createdAt: String?
+    public var updatedAt: String?
+    public var homepage: String?
+    public var size: Int?
+    public var stargazersCount: Int?
+    public var watchersCount: Int?
+    public var language: String?
+    public var forksCount: Int?
+    public var openIssuesCount: Int?
+    public var license: License?
+    public var allowForking: Bool?
+    public var topics: [String]?
+    public var visibility: String?
+    public var watchers: Int?
+    public var defaultBranch: String?
+    public var score: Double?
 
     enum CodingKeys: String, CodingKey {
         case id
