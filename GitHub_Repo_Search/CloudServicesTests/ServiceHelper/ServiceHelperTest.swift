@@ -30,7 +30,10 @@ final class ServiceHelperTest: XCTestCase {
                     XCTAssertEqual(expectedResponse.items?.count, response.items?.count)
                     XCTAssertEqual(expectedResponse.items?.first?.id, response.items?.first?.id)
                 }
+
+                exp.fulfill()
             }
+        wait(for: [exp], timeout: 2)
     }
 
     func test_parseResponse_searchRateLimitExceed() {
@@ -51,7 +54,9 @@ final class ServiceHelperTest: XCTestCase {
                     // Limit exceed message
                     XCTAssertEqual(expectedResponse.message, response.message)
                 }
+                exp.fulfill()
             }
+        wait(for: [exp], timeout: 2)
     }
 }
 
