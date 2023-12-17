@@ -16,12 +16,12 @@ class DashboardIntractor: DashboardPresenterToInteractorProtocol {
     func fetchRepositoryData(for query: String) {
         cloudRepo.getRepositoryList(for: query) { [weak self] result in
             guard let self = self else {
-                self?.presenter?.repositoryDataFetchedError()
+                self?.presenter?.repositoryDataFetchedError(error: ServiceError.badData)
                 return
             }
             switch result {
-            case .failure(_):
-                self.presenter?.repositoryDataFetchedError()
+            case let .failure(serviceError):
+                self.presenter?.repositoryDataFetchedError(error: serviceError)
 
             case let .success(response):
                 self.presenter?.repositoryDataFetchedSuccess(response: response)

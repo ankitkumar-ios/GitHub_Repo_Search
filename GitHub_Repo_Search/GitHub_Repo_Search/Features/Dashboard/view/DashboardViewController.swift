@@ -59,20 +59,28 @@ class DashboardViewController: UIViewController {
 // MARK: - Refresh Data
 extension DashboardViewController: DashboardPresenterToViewProtocol {
     func showSearchResult(response: SearchResponse) {
-        activityIndicator.stopAnimating()
         dataSource = response
         DispatchQueue.main.async { [weak self] in
-            if response.message == nil || response.message == "" {
-                self?.resultTitle.text = String(self?.dataSource?.items?.count ?? 0) + AppConstants.space + AppConstants.matchingResults
-            } else {
-                self?.resultTitle.text = self?.dataSource?.message
+            guard let self = self else {
+                return
             }
-            self?.collectionView.reloadData()
+            self.activityIndicator.stopAnimating()
+            if response.message == nil || response.message == "" {
+                self.resultTitle.text = String(self.dataSource?.items?.count ?? 0) + AppConstants.space + AppConstants.matchingResults
+            } else {
+                self.resultTitle.text = self.dataSource?.message
+            }
+            self.collectionView.reloadData()
         }
     }
 
-    func showError() {
-        resultTitle.text = AppConstants.badData
+    func showError(errorMessage: String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.activityIndicator.stopAnimating()
+            self?.resultTitle.text = errorMessage
+            self?.dataSource = nil
+            self?.collectionView.reloadData()
+        }
     }
 }
 

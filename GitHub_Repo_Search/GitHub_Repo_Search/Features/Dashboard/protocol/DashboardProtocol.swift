@@ -20,7 +20,7 @@ protocol DashboardViewToPresenterProtocol: AnyObject {
 protocol DashboardPresenterToViewProtocol: AnyObject {
     var presenter: DashboardViewToPresenterProtocol? {get set}
     func showSearchResult(response: SearchResponse)
-    func showError()
+    func showError(errorMessage: String)
 }
 
 protocol DashboardPresenterToInteractorProtocol {
@@ -35,5 +35,5 @@ protocol DashboardPresenterToRouterProtocol {
 
 protocol DashboardIntractorToPresenterProtocol: AnyObject {
     func repositoryDataFetchedSuccess(response: SearchResponse)
-    func repositoryDataFetchedError()
+    func repositoryDataFetchedError(error: ServiceError)
 }

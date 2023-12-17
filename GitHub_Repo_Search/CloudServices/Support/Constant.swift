@@ -21,6 +21,7 @@ public enum HTTPStatusCode: Int {
     case forbidden = 403
     case notFound = 404
     case internalServerError = 500
+    case couldNotFindData = 422
 }
 
 enum HTTPMethod: String {

@@ -27,8 +27,37 @@ extension DashboardPresenter: DashboardIntractorToPresenterProtocol {
         view?.showSearchResult(response: response)
     }
     
-    func repositoryDataFetchedError() {
-        view?.showError()
+    func repositoryDataFetchedError(error: ServiceError) {
+        var message = AppConstants.badData
+
+        switch error {
+        case .badData:
+            message = AppConstants.badData
+        case .noInternet:
+            message = AppConstants.noInternetConnection
+        case .invalidURL:
+            message = AppConstants.invalidUrl
+        case .serviceError(error: let error):
+            message = "Got error: " + error.localizedDescription
+        case .responseError(code: let code):
+            switch code {
+            case .ok:
+                break;
+            case .couldNotFindData:
+                message = AppConstants.couldNotFindData
+            case .badRequest:
+                message = AppConstants.badRequest
+            case .unauthorized:
+                message = AppConstants.unauthorized
+            case .forbidden:
+                message = AppConstants.forbidden
+            case .notFound:
+                message = AppConstants.notFound
+            case .internalServerError:
+                message = AppConstants.internalServiceError
+            }
+        }
+        view?.showError(errorMessage: message)
     }
 }
 
