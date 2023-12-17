@@ -14,7 +14,14 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .red
+        setupLayout()
+    }
+
+    private func setupLayout() {
+        self.layer.cornerRadius = 15
+        self.layer.masksToBounds = true
+
+        self.about.preferredMaxLayoutWidth = self.about.bounds.width
     }
 
     func configureCell(subTitle: String?, title: String?, about: String?) {

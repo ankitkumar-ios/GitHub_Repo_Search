@@ -9,7 +9,7 @@ import UIKit
 import CloudServices
 
 class DashboardPresenter: DashboardViewToPresenterProtocol {
-    var view: DashboardPresenterToViewProtocol?
+    weak var view: DashboardPresenterToViewProtocol?
     var interactor: DashboardPresenterToInteractorProtocol?
     var router: DashboardPresenterToRouterProtocol?
 

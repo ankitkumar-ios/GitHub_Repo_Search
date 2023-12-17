@@ -17,7 +17,8 @@ protocol DashboardViewToPresenterProtocol: AnyObject {
     func showRepositoryDetailViewController(navigationController: UINavigationController)
 }
 
-protocol DashboardPresenterToViewProtocol {
+protocol DashboardPresenterToViewProtocol: AnyObject {
+    var presenter: DashboardViewToPresenterProtocol? {get set}
     func showSearchResult(response: SearchResponse)
     func showError()
 }

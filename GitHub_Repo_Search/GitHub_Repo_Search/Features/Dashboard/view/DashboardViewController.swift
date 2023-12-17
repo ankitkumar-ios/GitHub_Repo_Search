@@ -13,14 +13,14 @@ class DashboardViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var resultTitle: UILabel!
 
-    weak var presenter: DashboardViewToPresenterProtocol?
+    var presenter: DashboardViewToPresenterProtocol?
 
     var dataSource: SearchResponse? = nil
 
     override func viewDidLoad() {
         setupSearchBar()
         setupCollectionView()
-        self.resultTitle.text = AppConstants.empty
+        setupTexts()
     }
 
     private func setupSearchBar() {
@@ -37,14 +37,20 @@ class DashboardViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         collectionView.backgroundColor = .clear
     }
+
+    private func setupTexts() {
+        self.resultTitle.text = AppConstants.empty
+    }
 }
 
 // MARK: - Refresh Data
 extension DashboardViewController: DashboardPresenterToViewProtocol {
     func showSearchResult(response: SearchResponse) {
         dataSource = response
-        resultTitle.text = String(dataSource?.totalCount ?? 0) + AppConstants.space + AppConstants.matchingResults
-        collectionView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.resultTitle.text = String(self?.dataSource?.items?.count ?? 0) + AppConstants.space + AppConstants.matchingResults
+            self?.collectionView.reloadData()
+        }
     }
 
     func showError() {
@@ -93,21 +99,13 @@ extension DashboardViewController: UICollectionViewDataSource {
 extension DashboardViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
-        let width = screenWidth / 3 - 10
+        let width = screenWidth / 2 - 20
 
-        return CGSize(width: width, height: 250)
+        return CGSize(width: width, height: 190)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
     }
 }
 

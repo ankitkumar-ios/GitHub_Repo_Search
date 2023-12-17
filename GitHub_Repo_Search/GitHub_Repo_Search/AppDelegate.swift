@@ -12,18 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        // Create Dashboard router instance
-        let dashboard = DashboardRouter().createModule()
-
-        // Initiating instance of navigationController with viewController */
-        let navigationController = UINavigationController()
-        navigationController.viewControllers = [dashboard]
-
-        // Setting up the root viewController as navigationController */
-        let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
         return true
     }
 

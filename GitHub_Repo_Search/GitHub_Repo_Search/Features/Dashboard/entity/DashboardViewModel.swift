@@ -14,6 +14,7 @@ protocol DashboardViewModelProtocol: AnyObject {
 
 // ViewModel is not needed as we are not doing any processing
 // Not using this class
+
 class DashboardViewModel {
     var presenter: DashboardPresenter?
     weak var delegate: DashboardViewModelProtocol?
