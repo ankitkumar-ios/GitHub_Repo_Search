@@ -49,6 +49,17 @@
 		EF81FB302B2EC91C003E031A /* RepoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB2F2B2EC91C003E031A /* RepoDetailPresenter.swift */; };
 		EF81FB322B2EC925003E031A /* RepoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB312B2EC925003E031A /* RepoDetailRouter.swift */; };
 		EF81FB342B2EC935003E031A /* RepoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB332B2EC935003E031A /* RepoDetailInteractor.swift */; };
+		EF81FB372B2F1C69003E031A /* DashboardPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB362B2F1C69003E031A /* DashboardPresenterTest.swift */; };
+		EF81FB3A2B2F1CC3003E031A /* MockDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB392B2F1CC3003E031A /* MockDashboardViewController.swift */; };
+		EF81FB3C2B2F404F003E031A /* MockDashboardIntractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB3B2B2F404F003E031A /* MockDashboardIntractor.swift */; };
+		EF81FB3E2B2F406A003E031A /* MockDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB3D2B2F406A003E031A /* MockDashboardRouter.swift */; };
+		EF81FB402B2F4131003E031A /* MockCloudRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB3F2B2F4131003E031A /* MockCloudRepo.swift */; };
+		EF81FB422B2F41FB003E031A /* DashboardInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB412B2F41FB003E031A /* DashboardInteractorTest.swift */; };
+		EF81FB442B2F42DE003E031A /* MockDashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB432B2F42DE003E031A /* MockDashboardPresenter.swift */; };
+		EF81FB482B2F494F003E031A /* RepoDetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB472B2F494F003E031A /* RepoDetailPresenterTest.swift */; };
+		EF81FB4B2B2F4B79003E031A /* MockRepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB4A2B2F4B79003E031A /* MockRepoDetailViewController.swift */; };
+		EF81FB4D2B2F4BBF003E031A /* MockRepoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB4C2B2F4BBF003E031A /* MockRepoDetailInteractor.swift */; };
+		EF81FB4F2B2F4C13003E031A /* RepoDetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81FB4E2B2F4C13003E031A /* RepoDetailInteractorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +160,17 @@
 		EF81FB2F2B2EC91C003E031A /* RepoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailPresenter.swift; sourceTree = "<group>"; };
 		EF81FB312B2EC925003E031A /* RepoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailRouter.swift; sourceTree = "<group>"; };
 		EF81FB332B2EC935003E031A /* RepoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailInteractor.swift; sourceTree = "<group>"; };
+		EF81FB362B2F1C69003E031A /* DashboardPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterTest.swift; sourceTree = "<group>"; };
+		EF81FB392B2F1CC3003E031A /* MockDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDashboardViewController.swift; sourceTree = "<group>"; };
+		EF81FB3B2B2F404F003E031A /* MockDashboardIntractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDashboardIntractor.swift; sourceTree = "<group>"; };
+		EF81FB3D2B2F406A003E031A /* MockDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDashboardRouter.swift; sourceTree = "<group>"; };
+		EF81FB3F2B2F4131003E031A /* MockCloudRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepo.swift; sourceTree = "<group>"; };
+		EF81FB412B2F41FB003E031A /* DashboardInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractorTest.swift; sourceTree = "<group>"; };
+		EF81FB432B2F42DE003E031A /* MockDashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDashboardPresenter.swift; sourceTree = "<group>"; };
+		EF81FB472B2F494F003E031A /* RepoDetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailPresenterTest.swift; sourceTree = "<group>"; };
+		EF81FB4A2B2F4B79003E031A /* MockRepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoDetailViewController.swift; sourceTree = "<group>"; };
+		EF81FB4C2B2F4BBF003E031A /* MockRepoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoDetailInteractor.swift; sourceTree = "<group>"; };
+		EF81FB4E2B2F4C13003E031A /* RepoDetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailInteractorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +257,9 @@
 		EF031FB02B2C348F00AFAAE2 /* GitHub_Repo_SearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF81FB382B2F1C97003E031A /* Mocks */,
+				EF81FB352B2F1C58003E031A /* Dashboard */,
+				EF81FB462B2F491C003E031A /* RepoDetail */,
 				EF031FB12B2C348F00AFAAE2 /* GitHub_Repo_SearchTests.swift */,
 			);
 			path = GitHub_Repo_SearchTests;
@@ -467,6 +492,54 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
+		EF81FB352B2F1C58003E031A /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EF81FB362B2F1C69003E031A /* DashboardPresenterTest.swift */,
+				EF81FB412B2F41FB003E031A /* DashboardInteractorTest.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		EF81FB382B2F1C97003E031A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EF81FB492B2F4B3C003E031A /* RepoDetail */,
+				EF81FB452B2F4888003E031A /* Dashboard */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EF81FB452B2F4888003E031A /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EF81FB392B2F1CC3003E031A /* MockDashboardViewController.swift */,
+				EF81FB3B2B2F404F003E031A /* MockDashboardIntractor.swift */,
+				EF81FB3D2B2F406A003E031A /* MockDashboardRouter.swift */,
+				EF81FB3F2B2F4131003E031A /* MockCloudRepo.swift */,
+				EF81FB432B2F42DE003E031A /* MockDashboardPresenter.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		EF81FB462B2F491C003E031A /* RepoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EF81FB472B2F494F003E031A /* RepoDetailPresenterTest.swift */,
+				EF81FB4E2B2F4C13003E031A /* RepoDetailInteractorTest.swift */,
+			);
+			path = RepoDetail;
+			sourceTree = "<group>";
+		};
+		EF81FB492B2F4B3C003E031A /* RepoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EF81FB4A2B2F4B79003E031A /* MockRepoDetailViewController.swift */,
+				EF81FB4C2B2F4BBF003E031A /* MockRepoDetailInteractor.swift */,
+			);
+			path = RepoDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -695,7 +768,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF81FB3A2B2F1CC3003E031A /* MockDashboardViewController.swift in Sources */,
+				EF81FB4F2B2F4C13003E031A /* RepoDetailInteractorTest.swift in Sources */,
+				EF81FB4D2B2F4BBF003E031A /* MockRepoDetailInteractor.swift in Sources */,
+				EF81FB442B2F42DE003E031A /* MockDashboardPresenter.swift in Sources */,
 				EF031FB22B2C348F00AFAAE2 /* GitHub_Repo_SearchTests.swift in Sources */,
+				EF81FB372B2F1C69003E031A /* DashboardPresenterTest.swift in Sources */,
+				EF81FB402B2F4131003E031A /* MockCloudRepo.swift in Sources */,
+				EF81FB3C2B2F404F003E031A /* MockDashboardIntractor.swift in Sources */,
+				EF81FB422B2F41FB003E031A /* DashboardInteractorTest.swift in Sources */,
+				EF81FB4B2B2F4B79003E031A /* MockRepoDetailViewController.swift in Sources */,
+				EF81FB3E2B2F406A003E031A /* MockDashboardRouter.swift in Sources */,
+				EF81FB482B2F494F003E031A /* RepoDetailPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,6 +1001,7 @@
 				DEVELOPMENT_TEAM = 3PWVABJG5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GitHub_Repo_Search/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Repo Finder";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -946,6 +1031,7 @@
 				DEVELOPMENT_TEAM = 3PWVABJG5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GitHub_Repo_Search/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Repo Finder";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

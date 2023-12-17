@@ -6,31 +6,35 @@
 //
 
 import UIKit
+import CloudServices
 
+/// Used for the communication from view to presenter
 protocol RepoDetailViewToPresenterProtocol: AnyObject {
     var view: RepoDetailPresenterToViewProtocol? {get set}
     var router: RepoDetailPresenterToRouterProtocol? {get set}
     var interactor: RepoDetailPresenterToInteractorProtocol? {get set}
-    func start()
+    func startFetchingRepoDetailData()
 }
 
-protocol RepoDetailPresenterToViewProtocol {
+/// Used for the communication from presenter to view
+protocol RepoDetailPresenterToViewProtocol: AnyObject {
     var presenter: RepoDetailViewToPresenterProtocol? {get set}
-    func getRepoData()
+    func populateRepoData(data: Items)
 }
 
+/// Used for the communication from presenter to router
 protocol RepoDetailPresenterToRouterProtocol {
-    func createModule() -> RepoDetailViewController
-    func openNextViewController()
+    func createModule(data: Items) -> RepoDetailViewController
 }
 
-protocol RepoDetailPresenterToInteractorProtocol {
-    var presenter: RepoDetailViewToPresenterProtocol? {get set}
-    func fetchData()
+/// Used for the communication from presenter to interactor
+protocol RepoDetailPresenterToInteractorProtocol: AnyObject {
+    var dataSource: Items? {get set}
+    var presenter: RepoDetailInteractorToPresenterProtocol? {get set}
+    func fetchAndSendRepoDetailData()
 }
 
-protocol RepoDetailInteractorToPresenterProtocol {
-    // No api calls needed
-    func getSuccessResponse()
-    func getFailureResponse()
+/// Used for the communication from interactor to presenter
+protocol RepoDetailInteractorToPresenterProtocol: AnyObject {
+    func getSuccessResponse(data: Items)
 }

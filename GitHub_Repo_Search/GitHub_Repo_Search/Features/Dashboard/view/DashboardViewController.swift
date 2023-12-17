@@ -12,9 +12,9 @@ class DashboardViewController: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var resultTitle: UILabel!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     var presenter: DashboardViewToPresenterProtocol?
-
     var dataSource: SearchResponse? = nil
 
     override func viewDidLoad() {
@@ -22,6 +22,7 @@ class DashboardViewController: UIViewController {
         setupSearchBar()
         setupCollectionView()
         setupTexts()
+        setupActivityIndicator()
     }
 
     private func setupNavigation() {
@@ -37,6 +38,8 @@ class DashboardViewController: UIViewController {
         searchBar.isTranslucent = false
         searchBar.backgroundImage = UIImage()
         searchBar.delegate = self
+
+        searchBar.becomeFirstResponder()
     }
 
     private func setupCollectionView() {
@@ -45,7 +48,11 @@ class DashboardViewController: UIViewController {
     }
 
     private func setupTexts() {
-        self.resultTitle.text = AppConstants.empty
+        self.resultTitle.text = AppConstants.startRepoByLanguage
+    }
+
+    func setupActivityIndicator() {
+        activityIndicator.color = .white
     }
 }
 
@@ -54,13 +61,26 @@ extension DashboardViewController: DashboardPresenterToViewProtocol {
     func showSearchResult(response: SearchResponse) {
         dataSource = response
         DispatchQueue.main.async { [weak self] in
-            self?.resultTitle.text = String(self?.dataSource?.items?.count ?? 0) + AppConstants.space + AppConstants.matchingResults
-            self?.collectionView.reloadData()
+            guard let self = self else {
+                return
+            }
+            self.activityIndicator.stopAnimating()
+            if response.message == nil || response.message == "" {
+                self.resultTitle.text = String(self.dataSource?.items?.count ?? 0) + AppConstants.space + AppConstants.matchingResults
+            } else {
+                self.resultTitle.text = self.dataSource?.message
+            }
+            self.collectionView.reloadData()
         }
     }
 
-    func showError() {
-        resultTitle.text = AppConstants.badData
+    func showError(errorMessage: String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.activityIndicator.stopAnimating()
+            self?.resultTitle.text = errorMessage
+            self?.dataSource = nil
+            self?.collectionView.reloadData()
+        }
     }
 }
 
@@ -75,6 +95,8 @@ extension DashboardViewController: UISearchBarDelegate {
         guard let searchText = searchBar.text else {
             return
         }
+        resultTitle.text = AppConstants.gettingNewResults
+        activityIndicator.startAnimating()
         presenter?.startFetchingRepositoryData(for: searchText)
     }
 }
@@ -117,6 +139,9 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
 
 extension DashboardViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.showRepositoryDetailViewController(navigationController: navigationController)
+        guard let item = dataSource?.items?[indexPath.row] else {
+            return
+        }
+        presenter?.showRepositoryDetailViewController(navigationController: navigationController, detail: item)
     }
 }
