@@ -15,6 +15,7 @@ struct AppConstants {
     static let space = " "
     static let matchingResults = "matching results"
     static let dashboard = "Dashboard"
+    static let kb = "KB"
 
     static let titleError = "Error"
     static let noInternetConnection = "No Internet, please turn on wifi or mobile network"

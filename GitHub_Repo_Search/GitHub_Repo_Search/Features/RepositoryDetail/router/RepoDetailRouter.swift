@@ -6,24 +6,26 @@
 //
 
 import UIKit
+import CloudServices
 
 class RepoDetailRouter: RepoDetailPresenterToRouterProtocol {
     private func mainStoryboard() -> UIStoryboard {
         UIStoryboard(name: "Main", bundle: Bundle.main)
     }
-    func createModule() -> RepoDetailViewController {
+    func createModule(data: Items) -> RepoDetailViewController {
         let view = mainStoryboard().instantiateViewController(withIdentifier: String(describing: RepoDetailViewController.self)) as! RepoDetailViewController
-
-        let presenter: RepoDetailViewToPresenterProtocol = RepoDetailPresenter()
-        presenter.router = RepoDetailRouter()
-        presenter.interactor = RepoDetailInteractor()
-
+        let presenter: RepoDetailViewToPresenterProtocol & RepoDetailInteractorToPresenterProtocol = RepoDetailPresenter()
+        let interactor: RepoDetailPresenterToInteractorProtocol = RepoDetailInteractor()
+        let router: RepoDetailPresenterToRouterProtocol = RepoDetailRouter()
+        
         view.presenter = presenter
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+
+        interactor.dataSource = data
 
         return view
-    }
-    
-    func openNextViewController() {
-        
     }
 }

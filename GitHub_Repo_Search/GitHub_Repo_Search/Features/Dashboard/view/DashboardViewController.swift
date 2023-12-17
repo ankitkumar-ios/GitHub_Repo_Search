@@ -117,6 +117,9 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
 
 extension DashboardViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.showRepositoryDetailViewController(navigationController: navigationController)
+        guard let item = dataSource?.items?[indexPath.row] else {
+            return
+        }
+        presenter?.showRepositoryDetailViewController(navigationController: navigationController, detail: item)
     }
 }
