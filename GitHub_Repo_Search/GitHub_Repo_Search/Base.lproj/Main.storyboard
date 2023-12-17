@@ -474,7 +474,7 @@
                         <outlet property="fullNameLabel" destination="JNm-E4-nyL" id="CEW-xz-F68"/>
                         <outlet property="issueCountLabel" destination="P8h-NI-lyr" id="IyF-eu-mD2"/>
                         <outlet property="languageLabel" destination="7rY-64-DGq" id="agM-eE-HVc"/>
-                        <outlet property="nameLabel" destination="JNm-E4-nyL" id="o22-O1-HAV"/>
+                        <outlet property="nameLabel" destination="C4W-cf-hOQ" id="Bva-fM-ki6"/>
                         <outlet property="ownerNameLabel" destination="0oI-dn-z0v" id="C9s-9A-3BJ"/>
                         <outlet property="scoreLabel" destination="it4-Ga-He9" id="ZCJ-lM-gdS"/>
                         <outlet property="sizeLabel" destination="AYl-4u-sEC" id="f29-vF-Dvj"/>
