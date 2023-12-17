@@ -26,9 +26,9 @@ class DashboardRouter: DashboardPresenterToRouterProtocol {
         return view
     }
 
-    func pushToRepositoryDetailViewController(navigationController: UINavigationController) {
+    func pushToRepositoryDetailViewController(navigationController: UINavigationController?) {
         let repoDetailVC = RepoDetailRouter().createModule()
-        navigationController.pushViewController(repoDetailVC, animated: true)
+        navigationController?.pushViewController(repoDetailVC, animated: true)
     }
 
 }

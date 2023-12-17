@@ -18,9 +18,15 @@ class DashboardViewController: UIViewController {
     var dataSource: SearchResponse? = nil
 
     override func viewDidLoad() {
+        setupNavigation()
         setupSearchBar()
         setupCollectionView()
         setupTexts()
+    }
+
+    private func setupNavigation() {
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationItem.title = AppConstants.empty
     }
 
     private func setupSearchBar() {
@@ -111,6 +117,6 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
 
 extension DashboardViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Go to next view
+        presenter?.showRepositoryDetailViewController(navigationController: navigationController)
     }
 }

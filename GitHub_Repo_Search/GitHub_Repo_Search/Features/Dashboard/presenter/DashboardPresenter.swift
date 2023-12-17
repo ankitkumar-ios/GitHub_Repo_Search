@@ -17,7 +17,7 @@ class DashboardPresenter: DashboardViewToPresenterProtocol {
         interactor?.fetchRepositoryData(for: query)
     }
 
-    func showRepositoryDetailViewController(navigationController: UINavigationController) {
+    func showRepositoryDetailViewController(navigationController: UINavigationController?) {
         router?.pushToRepositoryDetailViewController(navigationController: navigationController)
     }
 }

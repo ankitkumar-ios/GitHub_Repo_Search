@@ -191,16 +191,6 @@
                                     <constraint firstAttribute="height" constant="200" id="vMb-hs-DMu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To9-Mm-8gk">
-                                <rect key="frame" x="20" y="69" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="l2n-5H-W0S"/>
-                                    <constraint firstAttribute="width" secondItem="To9-Mm-8gk" secondAttribute="height" multiplier="1:1" id="vM6-2m-U7b"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CTD-Vs-3CF"/>
                         <color key="backgroundColor" red="0.18823529780000001" green="0.20392158630000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -208,8 +198,6 @@
                             <constraint firstItem="CTD-Vs-3CF" firstAttribute="trailing" secondItem="XN7-wE-5GZ" secondAttribute="trailing" id="37x-v4-McJ"/>
                             <constraint firstItem="XN7-wE-5GZ" firstAttribute="top" secondItem="jNV-4i-XN9" secondAttribute="top" id="IgA-97-drr"/>
                             <constraint firstItem="XN7-wE-5GZ" firstAttribute="leading" secondItem="CTD-Vs-3CF" secondAttribute="leading" id="Txc-bE-1HK"/>
-                            <constraint firstItem="To9-Mm-8gk" firstAttribute="top" secondItem="CTD-Vs-3CF" secondAttribute="top" constant="10" id="X8O-qu-efI"/>
-                            <constraint firstItem="To9-Mm-8gk" firstAttribute="leading" secondItem="CTD-Vs-3CF" secondAttribute="leading" constant="20" id="h3b-Em-ua3"/>
                             <constraint firstItem="U5k-QU-N5D" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CTD-Vs-3CF" secondAttribute="top" constant="20" id="hNi-yc-wqI"/>
                         </constraints>
                     </view>
@@ -220,7 +208,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="logo" width="174.66667175292969" height="170.66667175292969"/>
         <image name="repoListLogo" width="76.666664123535156" height="75"/>
     </resources>

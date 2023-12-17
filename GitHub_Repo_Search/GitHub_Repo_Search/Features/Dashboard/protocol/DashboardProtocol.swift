@@ -14,7 +14,7 @@ protocol DashboardViewToPresenterProtocol: AnyObject {
     var router: DashboardPresenterToRouterProtocol? {get set}
 
     func startFetchingRepositoryData(for query: String)
-    func showRepositoryDetailViewController(navigationController: UINavigationController)
+    func showRepositoryDetailViewController(navigationController: UINavigationController?)
 }
 
 protocol DashboardPresenterToViewProtocol: AnyObject {
@@ -30,7 +30,7 @@ protocol DashboardPresenterToInteractorProtocol {
 
 protocol DashboardPresenterToRouterProtocol {
     func createModule() -> DashboardViewController
-    func pushToRepositoryDetailViewController(navigationController: UINavigationController)
+    func pushToRepositoryDetailViewController(navigationController: UINavigationController?)
 }
 
 protocol DashboardIntractorToPresenterProtocol: AnyObject {
