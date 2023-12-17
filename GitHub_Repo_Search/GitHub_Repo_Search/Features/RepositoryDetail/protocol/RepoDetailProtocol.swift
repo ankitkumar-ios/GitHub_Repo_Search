@@ -6,31 +6,30 @@
 //
 
 import UIKit
+import CloudServices
 
 protocol RepoDetailViewToPresenterProtocol: AnyObject {
     var view: RepoDetailPresenterToViewProtocol? {get set}
     var router: RepoDetailPresenterToRouterProtocol? {get set}
     var interactor: RepoDetailPresenterToInteractorProtocol? {get set}
-    func start()
+    func startFetchingRepoDetailData()
 }
 
-protocol RepoDetailPresenterToViewProtocol {
+protocol RepoDetailPresenterToViewProtocol: AnyObject {
     var presenter: RepoDetailViewToPresenterProtocol? {get set}
-    func getRepoData()
+    func populateRepoData(data: Items)
 }
 
 protocol RepoDetailPresenterToRouterProtocol {
-    func createModule() -> RepoDetailViewController
-    func openNextViewController()
+    func createModule(data: Items) -> RepoDetailViewController
 }
 
-protocol RepoDetailPresenterToInteractorProtocol {
-    var presenter: RepoDetailViewToPresenterProtocol? {get set}
-    func fetchData()
+protocol RepoDetailPresenterToInteractorProtocol: AnyObject {
+    var dataSource: Items? {get set}
+    var presenter: RepoDetailInteractorToPresenterProtocol? {get set}
+    func fetchAndSendRepoDetailData()
 }
 
-protocol RepoDetailInteractorToPresenterProtocol {
-    // No api calls needed
-    func getSuccessResponse()
-    func getFailureResponse()
+protocol RepoDetailInteractorToPresenterProtocol: AnyObject {
+    func getSuccessResponse(data: Items)
 }

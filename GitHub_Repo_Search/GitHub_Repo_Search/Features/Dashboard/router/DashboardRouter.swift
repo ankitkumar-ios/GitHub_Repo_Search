@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudServices
 
 class DashboardRouter: DashboardPresenterToRouterProtocol {
     func mainstoryboard() -> UIStoryboard {
@@ -26,8 +27,8 @@ class DashboardRouter: DashboardPresenterToRouterProtocol {
         return view
     }
 
-    func pushToRepositoryDetailViewController(navigationController: UINavigationController?) {
-        let repoDetailVC = RepoDetailRouter().createModule()
+    func pushToRepositoryDetailViewController(navigationController: UINavigationController?, itemData: Items) {
+        let repoDetailVC = RepoDetailRouter().createModule(data: itemData)
         navigationController?.pushViewController(repoDetailVC, animated: true)
     }
 

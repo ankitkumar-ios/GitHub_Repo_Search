@@ -5,12 +5,16 @@
 //  Created by Ankit Kumar on 17/12/23.
 //
 
-import Foundation
+import UIKit
+import CloudServices
 
 class RepoDetailInteractor: RepoDetailPresenterToInteractorProtocol {
-    var presenter: RepoDetailViewToPresenterProtocol?
-    
-    func fetchData() {
-        // No API calls needed
+    weak var presenter: RepoDetailInteractorToPresenterProtocol?
+    var dataSource: Items?
+
+    func fetchAndSendRepoDetailData() {
+        if let dataSource = dataSource {
+            presenter?.getSuccessResponse(data: dataSource)
+        }
     }
 }
